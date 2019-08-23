@@ -35,7 +35,7 @@ public class Game {
 			runStart();
 		}
 	}
-	// Main Program Limitation: only 2 operands
+	// Limitation: only 2 operands
 	public void runBot() {
 		Calculation c = new Calculation();
 		System.out.printf("*BZZZZTKZ*What would you like me to cal-cal-calcalculate?%n%n1)SUM%n%n2)SUBTRACTION%n%n3)MULTIPlICATION%n%n4)DIVISION%n%n5)MODULO%n%n");
