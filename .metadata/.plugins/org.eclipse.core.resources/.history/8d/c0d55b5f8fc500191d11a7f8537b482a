@@ -35,6 +35,9 @@ public class Game {
 			runStart();
 		}
 	}
+	public void runTxt() {
+		System.out.println(" A common mistake that people make when trying to design something completely foolproof is to underestimate the ingenuity of complete fools.");
+	}
 	// Limitation: only 2 operands
 	public void runBot() {
 		Calculation c = new Calculation();
@@ -100,13 +103,5 @@ public class Game {
 			p2 = getOperand2();
 		}
 		return p2;
-	}
-	public void askAgain() {
-		System.out.printf("Would you like me to calculate something else? %n%n 1)YES (please!)%n%n2)NOPE!");
-		
-	}
-	//for debugging purposes
-	public void runTxt() {
-		System.out.println(" A common mistake that people make when trying to design something completely foolproof is to underestimate the ingenuity of complete fools.");
 	}
 }
