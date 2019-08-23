@@ -107,7 +107,7 @@ public class Game {
 		return p2;
 	}
 	public void askAgain() {
-		System.out.printf("Would you like me to calculate something else? %n%n1)YES (please!)%n%n2)NOPE (thanks!)%n");
+		System.out.printf("Would you like me to calculate something else? %n%n1)YES (please!)%n%n2)NOPE (thanks!)");
 		String ask_choice = input.nextLine();
 		switch (ask_choice) {
 		case "1":
