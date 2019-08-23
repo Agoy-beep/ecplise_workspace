@@ -1,0 +1,102 @@
+package calculatorBot;
+import java.util.*;
+
+public class Game {
+
+	public Scanner input = new Scanner(System.in);
+	
+	//Title
+	public void runTitle() {
+		System.out.println("///////////////");
+		System.out.println("/CALCULATORBOT/");
+		System.out.println("///////////////");
+		runStart();
+	}
+	//Start Screen
+	public void runStart() {
+		
+		System.out.printf("%n%nSELECT AN OPTION!");
+		System.out.printf("%n%n1)START%n%n2)QUIT%n%n");
+		String choice = input.nextLine();
+		if (choice.equals("1")||choice.equals("2")) {
+			switch (choice) {
+			case "1":
+				runBot();
+				runTxt();
+				break;
+			case "2":
+				runBot();
+				runTxt();
+				break;
+			}
+		}
+		else {
+			System.out.println("Invalid input");
+			runStart();
+		}
+		//doesn't work as intended!
+		/*try {
+			switch (choice) {
+			case "1":
+				runTxt();
+				break;
+			case "2":
+				runTxt();
+				break;
+			}
+		}
+		catch(Exception e) {
+			System.out.println("Invalid input!");
+			runStart();
+		}*/
+	}
+	public void runTxt() {
+		System.out.println(" A common mistake that people make when trying to design something completely foolproof is to underestimate the ingenuity of complete fools.");
+	}
+	public void runBot() {
+		Calculation c = new Calculation();
+		System.out.printf("What would you like me to calculate?%n%n1)SUM%n%n2)SUBTRACTION%n%n3)MULTIPlICATION%n%n4)DIVISION%n%n5)MODULO%n%n");
+		String bot_choice = input.nextLine();
+		
+		if (bot_choice.equals("1")||bot_choice.equals("2")||bot_choice.equals("3")||bot_choice.equals("4")||bot_choice.equals("5")) {
+			switch(bot_choice) {
+			case"1":
+				int a = getParam1();
+				int b = getParam2();
+				System.out.println(c.getSum(a,b));
+			case "2":
+				int a = getParam1();
+				int b = getParam2();
+				System.out.println(c.getSub(a,b));
+			}
+		}
+	}
+	public int getParam1() {
+		String param1 = input.nextLine();
+		int p1;
+		try {
+			p1 = Integer.parseInt(param1);
+			
+		}
+		catch (NumberFormatException e) {
+			System.out.println("Invalid input, try again!");
+			p1 = 0;
+			getParam1();
+		}
+		
+		return p1;
+	}
+	public int getParam2() {
+		String param2 = input.nextLine();
+		int p2;
+		try {
+			p2 = Integer.parseInt(param2);
+		}
+		catch (NumberFormatException e) {
+			System.out.println("Invalid input, try again!");
+			p2 = 0;
+			getParam2();
+		}
+		return p2;
+	}
+}

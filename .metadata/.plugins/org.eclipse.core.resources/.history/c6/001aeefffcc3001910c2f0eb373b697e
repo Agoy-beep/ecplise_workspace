@@ -1,0 +1,12 @@
+package RPG;
+
+public class Weapon {
+
+	private int w-dmg;
+	Weapon(String name){
+		super(name);
+	}
+	public int getWDmg(){
+		return w-dmg;
+	}
+}

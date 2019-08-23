@@ -1,0 +1,59 @@
+package calculatorBot;
+import java.util.*;
+
+public class Game {
+
+	public Scanner input = new Scanner(System.in);
+	
+	//Title
+	public void runTitle() {
+		System.out.println("///////////////");
+		System.out.println("/CALCULATORBOT/");
+		System.out.println("///////////////");
+		runStart();
+	}
+	//Start Screen
+	public void runStart() {
+		
+		System.out.printf("%n%nSELECT AN OPTION!");
+		System.out.printf("%n%n1)START%n%n2)QUIT%n%n");
+		String choice = input.nextLine();
+		if (choice.equals("1")||choice.equals("2")) {
+			switch (choice) {
+			case "1":
+				//runBot();
+				runTxt();
+				break;
+			case "2":
+				//runBot();
+				runTxt();
+				break;
+			}
+		}
+		else {
+			System.out.println("Invalid input");
+			runStart();
+		}
+		//doesn't work as intended!
+		/*try {
+			switch (choice) {
+			case "1":
+				runTxt();
+				break;
+			case "2":
+				runTxt();
+				break;
+			}
+		}
+		catch(Exception e) {
+			System.out.println("Invalid input!");
+			runStart();
+		}*/
+	}
+	public void runTxt() {
+		System.out.println(" A common mistake that people make when trying to design something completely foolproof is to underestimate the ingenuity of complete fools.");
+	}
+	public void runBot() {
+		System.out.printf("What would you like me to calculate?%n%n1)SUM%n%n2)SUBTRACTION%n%n3)MULTIPlICATION%n%n4)DIVISION%n%n5)MODULO%n%n");
+	}
+}

@@ -1,0 +1,6 @@
+package RPG;
+
+interface Armor{
+
+	public float caclImpact(Item i);
+}

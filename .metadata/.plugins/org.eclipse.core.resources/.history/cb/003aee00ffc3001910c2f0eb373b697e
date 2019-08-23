@@ -1,0 +1,6 @@
+package RPG;
+
+public class Armor extends Item{
+
+	public float caclImpact(Item i);
+}

@@ -1,0 +1,21 @@
+package calculatorBot;
+
+public class Calculation {
+
+	private int getSum(int a, int b) {
+		int sum = a + b;
+		return(sum);
+	}
+	private int getSub(int a, int b) {
+		int sub = a - b;
+		return(sub);
+	}
+	private int getMult(int a, int b) {
+		int mult = a * b;
+		return(mult);
+	}
+	private double getDiv(int a, int b) {
+		double div = a / b;
+		return (div);
+	}
+}

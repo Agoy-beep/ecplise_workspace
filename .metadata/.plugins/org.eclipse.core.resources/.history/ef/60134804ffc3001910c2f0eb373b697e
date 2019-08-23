@@ -1,0 +1,13 @@
+package RPG;
+
+public class ChestArmor extends Armor {
+
+	private int a_dmgmitbase;
+	private float a_dmgmittotal;
+	
+	ChestArmor(String name){
+		super(name);
+		a_dmgmitbase = 6;
+	}
+	
+}

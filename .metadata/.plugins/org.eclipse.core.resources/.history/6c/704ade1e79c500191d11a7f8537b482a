@@ -1,0 +1,12 @@
+package calculatorBot;
+
+public class Game {
+
+	//Start Screen
+	public void runStart() {
+		System.out.println("///////////////");
+		System.out.println("/CALCULATORBOT/");
+		System.out.println("///////////////");
+	}
+	
+}

@@ -1,0 +1,37 @@
+package RPG;
+import java.util.*;
+
+public class Player {
+
+	ArrayList<Item> inventory = new ArrayList<Item>();
+	ChestArmor [] chest = new ChestArmor [1];
+	Weapon [] left_hand = new Weapon [1];
+	private double inv_capacity;
+	private double inv_weight;
+	private boolean eq_chest;
+	private boolean eq_ILeftH;
+	private int health;
+	
+	Player(){
+		inv_capacity = 70.00;
+		eq_chest = false;
+		eq_ILeftH = false;
+		health = 100;
+	}
+	public void setHealth(int h){
+		health = h;
+	}
+	public int getHealth(){
+		return health;
+	}
+	public void sumOfWeight (Item i){
+		double d = i.getWeight();
+		inv_weight = inv_weight + d;
+	}
+	public void calcInvWeight(){
+		for (Item i: inventory){
+			sumOfWeight(i);
+		}
+	}
+	public void pickUpItem
+}
