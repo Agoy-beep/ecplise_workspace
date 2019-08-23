@@ -28,7 +28,6 @@ public class Player {
 		double d = i.getWeight();
 		inv_weight = inv_weight + d;
 	}
-	//each item's weight gets added to the inventory to get a total inv weight (including the item you want to pick up).
 	public void calcInvWeight(){
 		for (Item i: inventory){
 			sumOfWeight(i);
